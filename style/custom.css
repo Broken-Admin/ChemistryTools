@@ -4,6 +4,10 @@ input, button {
     border: 0.2rem outset #818181;
 }
 
+td {
+    border: none;
+}
+
 code {
     background-color: #2a2a2a;
     color: #e8e8e8
