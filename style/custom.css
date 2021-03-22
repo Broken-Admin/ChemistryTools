@@ -1,0 +1,17 @@
+code {
+    background-color: #2a2a2a;
+}
+p.small-text {
+    font-size: 80%;
+}
+.readable {
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+}
+.no-dot {
+    list-style-type: none;
+}
+.no-indent {
+    padding: 0;
+    margin: 0;
+}
