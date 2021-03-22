@@ -41,22 +41,26 @@
             // TODO: This should implement the usage of existing calculating tools I've already written
             function displayFormula() {
                 let userVal = document.getElementById("formula-input").value;
-                let node = document.createTextNode(`${userVal}`);
+                let node = document.createElement("code");
+                node.innerText = userVal;
                 let massOut = document.getElementById("mass-out");
                 massOut.appendChild(node);
-                let linebreak = document.createElement("br");
-                massOut.appendChild(linebreak);
-                
             }
         </script>
 
-        <div id="userin">
+        <div id="userin" class="margin">
             <input id="formula-input" type="text" placeholder="Formula" autocomplete="off">
             <button onclick="displayFormula()">Calculate</button>
         </div>
         <hr>
         <div id="computerout">
-            <code id="mass-out"></code>
+          <table>
+            <tr>
+              <td id="mass-out">
+                
+              </td>
+            </tr>
+          </table>
         </div>
 
       </section>
