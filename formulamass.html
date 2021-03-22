@@ -36,6 +36,7 @@
             <span class="credits right">Hosted on GitHub Pages — Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
         
+        <!-- TODO: Move this to a seperate file -->
         <script>
             // TODO: This should implement the usage of existing calculating tools I've already written
             function displayFormula() {
@@ -44,14 +45,12 @@
                 document.getElementById("mass-out").appendChild(node);
             }
         </script>
-        <form>
+
+        <div id="userin">
             <input id="formula-input" type="text" placeholder="Formula" autocomplete="off">
             <button onclick="displayFormula()">Calculate</button>
-        </form>
-        <code id="mass-out">
-
-        </code>
-
+            <code id="mass-out"></code>
+        </div>
 
       </section>
 
