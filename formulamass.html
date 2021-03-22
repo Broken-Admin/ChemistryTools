@@ -1,4 +1,4 @@
-<html style="" lang="en-US">
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,6 +6,7 @@
     <title>Formula Mass Calculator</title>
 
     <link rel="stylesheet" href="/ChemistryTools/assets/css/style.css">
+    <link rel="stylesheet" href="/ChemistryTools/style/custom.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="/ChemistryTools/assets/js/respond.js"></script>
     <!--[if lt IE 9]>
@@ -37,13 +38,18 @@
         
         <script>
             function displayFormula() {
-                console.log(document.getElementById("formula-input").value)
+                let userVal = document.getElementById("formula-input").value;
+                let node = document.createTextNode(`${userVal}`);
+                document.getElementById("")
             }
         </script>
         <form>
             <input id="formula-input" type="text" placeholder="Formula" autocomplete="off">
             <button onclick="displayFormula()">Calculate</button>
         </form>
+        <code>
+
+        </code>
 
 
       </section>
