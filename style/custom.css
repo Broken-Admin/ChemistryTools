@@ -1,6 +1,7 @@
 input, button {
     background: #353535;
     color: #e8e8e8;
+    border: 0.2rem outset #818181;
 }
 
 code {
