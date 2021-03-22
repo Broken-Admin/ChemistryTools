@@ -42,7 +42,11 @@
             function displayFormula() {
                 let userVal = document.getElementById("formula-input").value;
                 let node = document.createTextNode(`${userVal}`);
-                document.getElementById("mass-out").appendChild(node);
+                let massOut = document.getElementById("mass-out");
+                massOut.appendChild(node);
+                let linebreak = document.createElement("br");
+                massOut.appendChild(linebreak);
+                
             }
         </script>
 
