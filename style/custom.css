@@ -1,5 +1,11 @@
+input, button {
+    background: #353535;
+    color: #e8e8e8;
+}
+
 code {
     background-color: #2a2a2a;
+    color: #e8e8e8
 }
 p.small-text {
     font-size: 80%;
