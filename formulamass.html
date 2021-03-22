@@ -37,17 +37,18 @@
         </div>
         
         <script>
+            // TODO: This should implement the usage of existing calculating tools I've already written
             function displayFormula() {
                 let userVal = document.getElementById("formula-input").value;
                 let node = document.createTextNode(`${userVal}`);
-                document.getElementById("")
+                document.getElementById("mass-out").appendChild(node);
             }
         </script>
         <form>
             <input id="formula-input" type="text" placeholder="Formula" autocomplete="off">
             <button onclick="displayFormula()">Calculate</button>
         </form>
-        <code>
+        <code id="mass-out">
 
         </code>
 
