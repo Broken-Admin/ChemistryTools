@@ -5,7 +5,7 @@ entireFormulaReg = /([A-Z]{1}[a-z]{0,1}\d{0,}|\(([A-Z]{1}[a-z]{0,}\d{0,}){2,}\)\
 function handleInput() {
     let userFormula = document.getElementById("formula-input").value;
     // Confirm that the user entered a valid formula
-    if(userFormula.match(entireFormulaReg) != userFormula) {
+    if(userFormula.match(entireFormulaReg)[0] != userFormula) {
         displayText(`Formula ${userFormula} is invalid.`);
         return;
     }
