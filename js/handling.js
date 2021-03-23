@@ -2,7 +2,7 @@
 // only used to confirm that a formula is valid
 entireFormulaReg = /([A-Z]{1}[a-z]{0,1}\d{0,}|\(([A-Z]{1}[a-z]{0,}\d{0,}){2,}\)\d{0,}){1,}/;
 
-function handleInput() {
+function handleFormulaInput() {
     let userFormula = document.getElementById("formula-input").value;
     // Confirm that the user entered a valid formula
     if(userFormula.match(entireFormulaReg)[0] != userFormula) {
