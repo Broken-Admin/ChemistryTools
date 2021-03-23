@@ -22,6 +22,7 @@ function handleFormulaInput() {
         // exotic matter.
     } // Otherwise assume the value was calculated as expected
     else displayFormula(userFormula, mass);
+    console.log(mass);
     return;
 }
 
