@@ -28,7 +28,7 @@ function handleFormulaInput() {
 
 function displayFormula(formula, mass) {
     let node = document.createElement("code");
-    node.innerText = `1mol ${formula} = ${mass}g ${formula}`;
+    node.innerText = `1mol ${formula.toFixed(2)} = ${mass}g ${formula}`;
     let massOut = document.getElementById("mass-out");
     massOut.appendChild(node);
 }
