@@ -19,9 +19,11 @@ function handleInput() {
         if(mass == -2) displayText(`Encountered a nonexistent or undocumented element in the formula ${userFormula}, please confirm you have not made any typos.`);
         // Something else has happened, let's assume you made a scientific breakthrough beyond any other and have found
         // exotic matter.
+        return;
     }
     // Otherwise assume the value was calculated as expected
     displayFormula(userFormula, mass);
+    return;
 }
 
 function displayFormula(formula, mass) {
