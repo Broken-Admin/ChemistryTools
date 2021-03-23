@@ -1,6 +1,6 @@
 // Matches a singular formula, parenthesis, subscripts and all,
 // only used to confirm that a formula is valid
-entireFormulaReg = /([A-Z]{1}[a-z]{0,1}\d{0,}|\(([A-Z]{1}[a-z]{0,}\d{0,}){2,}\)\d{0,}){1,}/;
+entireFormulaReg = /([A-Z]{1}[a-z]{0,1}\d{0,}|\(([A-Z]{1}[a-z]{0,}\d{0,}){2,}\)\d{0,})+/;
 
 function handleFormulaInput() {
     let userFormula = document.getElementById("formula-input").value;
@@ -28,7 +28,8 @@ function handleFormulaInput() {
 
 function displayFormula(formula, mass) {
     let node = document.createElement("code");
-    node.innerText = `1mol ${formula} = ${mass.toFixed(2)}g ${formula}`;
+    mass = mass.toFixed(2).toString().replace(/(\d+\.\d{2})/g, '<sub>$1</sub>');
+    node.innerHTML = `1mol ${formula} = ${mass}g ${formula}`;
     let massOut = document.getElementById("mass-out");
     massOut.appendChild(node);
 }
