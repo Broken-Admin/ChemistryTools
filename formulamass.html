@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="/ChemistryTools/style/custom.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="/ChemistryTools/assets/js/respond.js"></script>
+    <script src="/ChemistryTools/js/formulafunctions.js"></script>
+    <script src="/ChemistryTools/js/PeiodicTableJSON.js"></script>
+    <script src="/ChemistryTools/js/formulamass.js"></script>
+    <script src="/ChemistryTools/js/handling.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -35,22 +39,10 @@
             <span class="credits left">Project maintained by <a href="https://github.com/Broken-Admin">Broken-Admin</a></span>
             <span class="credits right">Hosted on GitHub Pages — Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
-        
-        <!-- TODO: Move this to a seperate file -->
-        <script>
-            // TODO: This should implement the usage of existing calculating tools I've already written
-            function displayFormula() {
-                let userVal = document.getElementById("formula-input").value;
-                let node = document.createElement("code");
-                node.innerText = userVal;
-                let massOut = document.getElementById("mass-out");
-                massOut.appendChild(node);
-            }
-        </script>
 
         <div id="userin" class="margin">
             <input id="formula-input" type="text" placeholder="Formula" autocomplete="off">
-            <button onclick="displayFormula()">Calculate</button>
+            <button onclick="handleInput()">Calculate</button>
         </div>
         <hr>
         <div id="computerout">
