@@ -9,17 +9,19 @@ function handleInput() {
         displayText(`Formula ${userFormula} is invalid.`);
         return;
     }
-    let value = formulaMass(userFormula);
+    let mass = formulaMass(userFormula);
     // If the formulaMass returned a negative value, which should never
     // happen unless you're measuring the mass of exotic matter.
     // If you happen to be measuring the mass of exotic matter, please
     // claim your Nobel Prize.
-    if(value < 0) {
-        if(value == -1) displayText(`Unable to parse formula ${userFormula}, please confirm this is a valid formula and try again.`);
-        if(value == -2) displayText(`Encountered a nonexistent or undocumented element in the formula ${userFormula}, please confirm you have not made any typos.`);
+    if(mass < 0) {
+        if(mass == -1) displayText(`Unable to parse formula ${userFormula}, please confirm this is a valid formula and try again.`);
+        if(mass == -2) displayText(`Encountered a nonexistent or undocumented element in the formula ${userFormula}, please confirm you have not made any typos.`);
         // Something else has happened, let's assume you made a scientific breakthrough beyond any other and have found
         // exotic matter.
     }
+    // Otherwise assume the value was calculated as expected
+    displayFormula(userFormula, mass);
 }
 
 function displayFormula(formula, mass) {
