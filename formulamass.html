@@ -7,8 +7,6 @@
 
     <link rel="stylesheet" href="/ChemistryTools/assets/css/style.css">
     <link rel="stylesheet" href="/ChemistryTools/style/custom.css">
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="/ChemistryTools/assets/js/respond.js"></script> -->
     <script src="/ChemistryTools/js/formulafunctions.js"></script>
     <script src="/ChemistryTools/js/PeriodicTableJSON.js"></script>
     <script src="/ChemistryTools/js/formulamass.js"></script>
@@ -41,8 +39,11 @@
         </div>
 
         <div id="userin" class="margin">
-            <input id="formula-input" type="text" placeholder="Formula" autocomplete="off">
-            <button onclick="handleFormulaInput()">Calculate</button>
+            <p>Example formulas are H2O for Water, FeSO4 for Iron (II) Sulfate, and (NH4)2SO4 for Ammonium Sulfate.</p>
+            <form action="#" method="get" role="form">
+                <input id="formula-input" type="text" placeholder="Formula" autocomplete="off">
+                <button onclick="handleFormulaInput()" type="submit">Calculate</button>
+            </form>
         </div>
         <hr>
         <div id="computerout">
