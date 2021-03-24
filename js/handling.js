@@ -28,7 +28,9 @@ function handleFormulaInput() {
 
 function displayFormula(formula, mass) {
     let node = document.createElement("code");
-    mass = mass.toFixed(2).toString().replace(/(\d+\.\d{2})/g, '<sub>$1</sub>');
+    mass = mass.toFixed(2).toString();
+    // Use a clever replace and regex to display subscripts
+    formula = formula.replace(/([A-Z][a-z]{0,1})(\d)/g, '$1<sub>$2</sub>')
     node.innerHTML = `1mol ${formula} = ${mass}g ${formula}`;
     let massOut = document.getElementById("mass-out");
     massOut.appendChild(node);
