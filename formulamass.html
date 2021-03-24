@@ -38,6 +38,13 @@
             <span class="credits right">Hosted on GitHub Pages — Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
 
+        <!-- TODO: Move this to a seperate file -->
+        <script>
+          function handleKeydown(event) {
+            console.log(event.key);
+          }
+          document.querySelector('input').addEventListener('keypress', handleKeypress);
+        </script>
         <div id="userin" class="margin">
             <p>Example formulas are H2O for Water, FeSO4 for Iron (II) Sulfate, and (NH4)2SO4 for Ammonium Sulfate.</p>
             <form action="#" method="get" role="form">
