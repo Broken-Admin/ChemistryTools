@@ -44,3 +44,8 @@ function displayText(text) {
     let out = document.getElementById("mass-out");
     out.appendChild(node);
 }
+
+function clearText() {
+    let out = document.getElementById("mass-out");
+    out.innerHTML = "";
+}
